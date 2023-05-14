@@ -9,6 +9,10 @@ const routes: RouteObject[] = [
 		path: "/",
 		element: <App />,
 	},
+	{
+		path: "/bookmarks",
+		element: <App />,
+	},
 ];
 const router = createBrowserRouter(routes);
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
