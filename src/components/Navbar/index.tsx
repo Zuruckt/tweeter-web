@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import classnames from "clsx";
 import Tweeter from "@/assets/svg/tweeter.svg";
-import { HiOutlineUserCircle } from "react-icons/hi";
+import { BsGearFill } from "react-icons/bs";
+import { HiOutlineUserCircle, HiUsers } from "react-icons/hi";
+import { MdLogout } from "react-icons/md";
+
 import Manoel from "@/assets/images/Manoel-Gomes.jpg";
 import { Dropdown, FlowbiteDropdownTheme, useTheme } from "flowbite-react";
 
@@ -16,7 +19,7 @@ export function Navbar() {
 		floating: {
 			...theme.dropdown.floating,
 			item: {
-				icon: "",
+				...theme.dropdown.floating.item,
 				base: "font-noto-sans text-lg",
 			},
 		},
@@ -48,13 +51,19 @@ export function Navbar() {
 				<img className="w-12 h-12 object-cover rounded-lg" src={Manoel} alt="" />
 
 				<Dropdown arrowIcon label="Manoel Gomes" inline={true} theme={DropdownTheme}>
-					<Dropdown.Item icon={HiOutlineUserCircle} className="bg-red-400 leading-4">
+					<Dropdown.Item icon={HiOutlineUserCircle} className="text-xs font-noto-sans m-2">
 						My Profile
 					</Dropdown.Item>
-					<Dropdown.Item className="px-3.5">Group chat</Dropdown.Item>
-					<Dropdown.Item className="px-3.5">Settings</Dropdown.Item>
+					<Dropdown.Item icon={HiUsers} className="text-xs font-thin font-noto-sans m-2">
+						Group chat
+					</Dropdown.Item>
+					<Dropdown.Item icon={BsGearFill} className="text-xs font-noto-sans m-2">
+						Settings
+					</Dropdown.Item>
 					<Dropdown.Divider />
-					<Dropdown.Item className="px-3.5">Logout</Dropdown.Item>
+					<Dropdown.Item icon={MdLogout} className="text-xs font-noto-sans m-2">
+						Logout
+					</Dropdown.Item>
 				</Dropdown>
 			</div>
 		</div>
