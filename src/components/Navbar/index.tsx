@@ -40,10 +40,10 @@ export function Navbar() {
 				<NavLink className={isActiveHandler} to="/">
 					Home
 				</NavLink>
-				<NavLink className={isActiveHandler} to="/bookmarks">
+				<NavLink className={isActiveHandler} to="/explore">
 					Explore
 				</NavLink>
-				<NavLink className={isActiveHandler} to="/cu">
+				<NavLink className={isActiveHandler} to="/bookmarks">
 					Bookmarks
 				</NavLink>
 			</nav>
